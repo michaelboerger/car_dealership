@@ -14,9 +14,13 @@ class CarsController < ApplicationController
     end
   end
 
+  def show
+    @car = Car.find(params[:id])
+  end
+
   private
 
   def car_params
-    params.require(:car).permit(:color, :year, :mileage, :description)
+    params.require(:car).permit(:color, :year, :mileage, :description, :make_id)
   end
 end
