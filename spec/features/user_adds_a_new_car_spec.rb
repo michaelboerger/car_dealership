@@ -38,9 +38,6 @@ feature "user creates a new car", %Q{
     click_on "VRRRRROOOOOM!"
 
     expect(page).to have_content("*HONK SCREECH CRASH BOOM* CHECK YOUR BLIND SPOT YOU MADE MISTAKES")
-    # Speaking of mistakes! This test passes but the flash notice doesn't actually show up, I'm
-    # leaving it in because I want to remember to find out why that is. I assume its because of that
-    # HTML 5 stuff stopping the page from submitting
     expect(Car.count).to eq @prev_count
   end
 end

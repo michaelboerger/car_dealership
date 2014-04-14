@@ -1,0 +1,7 @@
+<%= @car.color %><br />
+<%= @car.year %><br />
+<%= @car.mileage %><br />
+<%= @car.description %><br />
+<% if @car.make %>
+  <p><%= @car.make.name %></p>
+<% end %>

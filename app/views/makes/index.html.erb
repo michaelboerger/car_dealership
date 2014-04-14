@@ -1,0 +1,7 @@
+ <%- @make.each do |make| %>
+      <tr>
+        <td><%= make.name %></td><br />
+        <td><%= make.country %></td><br />
+        <td><%= link_to "Delete #{make.name}", make_path(make), method: :delete %></td><br /><br />
+      </tr>
+    <%- end -%>

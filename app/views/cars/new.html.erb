@@ -4,5 +4,6 @@
   <%= f.input :year, collection: Car::YEARS %>
   <%= f.input :mileage %>
   <%= f.input :description %>
+  <%= f.association :make, label_method: :name %>
   <%= f.button :submit, "VRRRRROOOOOM!"  %>
 <% end %>

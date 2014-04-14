@@ -14,6 +14,16 @@ class MakesController < ApplicationController
     end
   end
 
+  def index
+    @make = Make.all
+  end
+
+  def destroy
+    @make = Make.find(params[:id])
+    @make.delete
+    redirect_to makes_url
+  end
+
   private
 
   def make_params
