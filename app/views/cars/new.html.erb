@@ -1,0 +1,8 @@
+<h1>Add a new car! DO IT</h1>
+<%= simple_form_for @car do |f| %>
+  <%= f.input :color %>
+  <%= f.input :year, collection: Car::YEARS %>
+  <%= f.input :mileage %>
+  <%= f.input :description %>
+  <%= f.button :submit, "VRRRRROOOOOM!"  %>
+<% end %>
